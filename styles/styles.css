@@ -130,7 +130,7 @@ body {
 
 .toggle {
     position: fixed;
-    top: 0;
+    top: 10px;
     right: 10px;
     z-index: 100;
     width: 40px;
