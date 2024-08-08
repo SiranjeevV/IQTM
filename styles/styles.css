@@ -668,4 +668,9 @@ p {
     .social {
         justify-content: center;
     }
+
+    .product-para,
+    .location-head {
+        text-align: center;
+    }
 }
