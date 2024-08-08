@@ -662,8 +662,8 @@
             .to('.four', { display: "block" })
 
             ;
-        // ScrollMagic
         var controller = new ScrollMagic.Controller({ loglevel: 2 });
+
         new ScrollMagic.Scene({
             triggerElement: "#section2",
             triggerHook: "onEnter",
@@ -671,6 +671,7 @@
         }).setPin("#section1 .pinWrapper", {
             pushFollowers: false
         }).addTo(controller);
+
         new ScrollMagic.Scene({
             triggerElement: "#section2",
             triggerHook: "onEnter",
@@ -678,6 +679,7 @@
         }).setPin("#section2 .pinWrapper", {
             pushFollowers: false
         }).addTo(controller);
+
         new ScrollMagic.Scene({
             triggerElement: "#section3",
             triggerHook: "onEnter",
