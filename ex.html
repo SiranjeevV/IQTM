@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* @import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap'); */
+
+        * {
+            margin: 0;
+        }
+
+        .main {
+            position: relative;
+            height: 100vh;
+            width: 100vw;
+        }
+
+        .parallex-layer {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: self-start;
+            justify-content: center;
+        }
+
+        #section1 {
+            position: absolute;
+            background: url('./banners/banner-1.png');
+            background-position: center;
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: 4;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+        }
+
+        #section2 {
+            position: absolute;
+            background: url('./banners/banner-2.jpg');
+            background-position: center;
+            /* background-repeat: no-repeat; */
+            background-size: cover;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: 3;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
+
+        }
+
+        #section3 {
+            position: absolute;
+            background: url('./banners/banner-3.jpg');
+            background-position: center;
+            background-size: cover;
+            width: 100% !important;
+            height: 100% !important;
+            z-index: 2;
+            /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
+
+
+
+        }
+
+        .parallex-layer .contents {
+            margin-left: 5%;
+            line-height: 35px;
+        }
+
+        .h2 {
+            font-size: 35px !important;
+            color: white !important;
+        }
+
+        .h3 {
+            font-size: 28px !important;
+            color: white !important;
+
+        }
+
+        .para {
+            font-size: 18px;
+            color: white !important;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main banners">
+        <div id="section1" class="parallex-layer section1">
+            <div class="contents">
+                <h2 class="h2">Innovation Begins</h2>
+                <h3 class="h3">at IQTechMax</h3>
+                <p class="para">Transforming Artificial Intelligence and Web 3.0 Ideas into Digital Realities</p>
+            </div>
+        </div>
+
+        <div id="section2" class="parallex-layer section2">
+            <div class="contents">
+                <h2 class="h2">Digital</h2>
+                <h3 class="h3">Revolution</h3>
+                <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, adipisci est.</p>
+            </div>
+        </div>
+
+        <div id="section3" class="parallex-layer section3">
+            <div class="contents">
+                <h2 class="h2">Where Data meets</h2>
+                <h3 class="h3">Intelligence</h3>
+                <p class="para">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, adipisci est.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+    <script>
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.banners',
+                start: 'top top',
+                end: '+=200%',
+                pin: true,
+                scrub: true,
+            }
+        })
+            .to('.section1', {
+                clipPath: 'polygon(0 0, 100% 0, 100% 1%, 0 1%)'
+            }).to('.section2', {
+                clipPath: 'polygon(0 0, 100% 0, 100% 1%, 0 1%)'
+            });
+        // .to('.section3', {
+        //     clipPath: 'polygon(0 0, 100% 0, 100% 0%, 0 0%)'
+        // });
+    </script>
+</body>
+
+</html>
