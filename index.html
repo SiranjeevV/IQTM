@@ -1,692 +1,997 @@
 <!DOCTYPE html>
-<html lang='en' class=''>
+<html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IQTechMax</title>
-    <link rel="icon" type="image/png" href="./images/iqtm-title-logo.png">
-    <link href="./styles/styles.css" rel="stylesheet">
+    <link href="./styles/style.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.9/dist/lenis.css">
-
-    <style>
-
-
-
-
-
-    </style>
-
-
-
+    <title>IQ-TechMax</title>
 </head>
 
 <body>
-    <div class=" show center  position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center main"
-        id="spinner">
-        <img src="./images/bg removed iqtechmax black.png" alt="">
+    <div class="indicator">
+        <div class="progress-container" id="progressBar">
+        </div>
     </div>
-    <header class="header" id="header">
-        <navbar class="nav d-flex align-items-center">
-            <div class="mt-3 ms-2 d-flex align-items-center">
-                <img class="ms-1 me-1" src="./images/bg removed iqtechmax.png" alt="">
-                <h3 class="h2 fs-5 mb-3 ms-2" style="display: inline-block;">IQTechMax</h3>
-            </div>
+    <div class="scroll-icon w-100 " id="scrollIcon">
+        <p class="para text-center fs-5 p-0 mb-1 w-100" style=" ">Scroll-down</p>
+        <i class="fa-solid fa-sort-down text-light text-center w-100 fs-1" style=""></i>
+
+    </div>
+    <div id="cursor" class="cursor"></div>
+    <header class="p-3 ">
+        <div class="nav ">
+
+            <a href="./ex.html" style="text-decoration: none;" class="d-flex h-100 align-items-center"><img
+                    src="./images/bg removed iqtechmax.png" class="mx-1" alt="">
+                <p class="mx-1 mt-2">IQTechMax</p>
+            </a>
+        </div>
+        <div class="toggle me-3 mt-3 pt-1" onclick="opennavipanel()" id="toggler">
+
+        </div>
+        <div id="navipanel" class="menu  me-2 mt-2 p-5 d-flex flex-column text-center justify-content-around">
+            <a class="para" href="">Home</a>
+            <a class="para" href="">About</a>
+            <a class="para" href="">Blog</a>
+            <a class="para" href="">Services</a>
+            <a class="para" href="">Careers</a>
 
 
-        </navbar>
+        </div>
     </header>
-    <div class="toggle me-3 mt-3" id="toggle" onclick="opennavpanel()">
 
-    </div>
-    <section class="navpanel pt-5" id="navpanel">
-        <div class="container mt-2  " style="position: relative;">
-            <div class="row">
-                <div class="col-lg-5">
-                    <strong class="text-light fs-5">IQTechMax</strong>
-                    <hr class="my-1 " style="color: white;">
-                    <div class="lists w-100 mt-2">
-                        <div class="navpanel-items ">
-                            <a href="" class="para">Home</a>
+
+
+    <div class="main banners m-0">
+        <div id="section1" class="parallex-layer section1">
+            <div class="conatiner w-100">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contents">
+                            <h2 class="h2 " style="text-transform: uppercase;">Innovation Begins</h2>
+                            <h3 class="h3 heading">at <span class="">IQTechMax</span></h3>
+                            <p class="para">Transforming Artificial Intelligence and Web 3.0 Ideas into Digital
+                                Realities</p>
+                            <a href="#" class="btn buttons px-3 py-2">Explore</a>
                         </div>
-                        <div class="navpanel-items ">
-
-                            <a href="" class="para">About</a>
-                        </div>
-                        <div class="navpanel-items ">
-
-                            <a href="" class="para">Services</a>
-                        </div>
-                        <div class="navpanel-items ">
-
-                            <a href="" class="para">Blog</a>
-                        </div>
-                        <div class="navpanel-items ">
-
-                            <a href="" class="para">Careers</a>
-                        </div>
-
-
-
                     </div>
                 </div>
-                <div class="col-lg-5">
-                    <strong class="text-light fs-5">Products</strong>
+            </div>
 
-                    <hr class="my-1 " style="color: white;">
+        </div>
 
-                    <div class="lists w-100 mt-2">
-                        <div class="navpanel-items">
-                            <a href="./ex.html" class="para text-center">IQ-Verse</a>
+        <div id="section2" class="parallex-layer section2">
+
+            <div class="conatiner w-100">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contents">
+                            <h2 class="h2" style="text-transform: uppercase;">Digital</h2>
+                            <h3 class="h3 heading">Revolution</h3>
+                            <p class="para">Building interconnected virtual universes to redefine
+                                the future of digital interaction and experience
+                            </p>
                         </div>
-                        <div class="navpanel-items ">
-
-                            <a href="" class="para">IQ-Lens</a>
-                        </div>
-
-
-
                     </div>
-                </div>
-
-            </div>
-
-
-        </div>
-    </section>
-
-
-    <!-- <section class="main"> -->
-    <div class="parallex-layer" id="section1">
-        <div class="banner-1 pinWrapper">
-            <div class="contents ms-5 px-3">
-                <h2 class=" h2 pb-0 mb-0">Innovation Begins</h2>
-                <h3 class="h3">at IQTechMax</h3>
-                <p class="para pt-2">Transforming Artificial Intelligence and Web 3.0 Ideas into Digital Realities
-                </p>
-            </div>
-
-            <!-- <img src="./banners/banner-1.png" alt=""> -->
-        </div>
-    </div>
-    <div class="parallex-layer-1" id="section2">
-        <div class="banner-2  pinWrapper">
-            <div class="contents ms-5 px-3">
-                <h2 class=" h2 pb-0 mb-0">Digital</h2>
-                <h3 class="h3">Revolution</h3>
-
-                <p class="para pt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, adipisci est.
-                    Ducimus pariatur doloribus repudiandae ex, maxime beatae.</p>
-                <!-- <img src="./banners/banner-2.png" alt=""> -->
-            </div>
-        </div>
-    </div>
-
-    <div class="parallex-layer-2" id="section3">
-        <div class="banner-3 pinWrapper">
-            <div class="contents ms-5 px-3">
-                <h2 class=" h2 pb-0 mb-0 ">Where Data meets </h2>
-                <h3 class="h3">Intelligence</h3>
-
-                <p class="para pt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet, adipisci est.
-                    Ducimus pariatur doloribus repudiandae ex, maxime beatae.</p>
-                <!-- <img src="./banners/banner-2.png" alt=""> -->
-            </div>
-        </div>
-    </div>
-    <section>
-        <!-- <div class="bordertop w-100 m-0" style="height: 2px;z-index: 14; background-color:cyan; position:sticky;  top: 0;
-        "></div> -->
-        <div class="features px-1">
-            <div class="container ">
-                <div class=" row justify-content-center">
-                    <div class="col-lg-12 my-2">
-                        <h2 class=" h2 mt-5 text-center">We’re a data-driven AI and Web 3.0 agency in the USA and
-                            India,
-                            Soon in Dubai!</h2>
-                    </div>
-                    <div class="col-lg-10 my-2">
-
-                        <p class="para text-center mb-5">IQ TechMax is a forward-thinking company at the forefront
-                            of
-                            Artificial Intelligence Web3.0 technology, empowering businesses to gain a competitive
-                            edge
-                            through innovative software development. Our team is dedicated to helping you harness
-                            the
-                            potential of AI and Web3.0 by offering an array of services tailored to your needs. We
-                            specialize in creating dynamic AI and Web 3.0 applications that leverage the latest
-                            tools
-                            and frameworks, ensuring your company stays at the cutting edge of technological
-                            advancements.</p>
-                    </div>
-                    <hr style="color: white !important; height:2px !important;">
                 </div>
             </div>
         </div>
-        <div class="about mt-4 px-2">
-            <div class="container  ">
+
+        <div id="section3" class="parallex-layer section3">
+
+            <div class="conatiner w-100">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="contents">
+                            <h2 class="h2 " style="text-transform: uppercase;">Where Data meets</h2>
+                            <h3 class="h3 heading">Intelligence</h3>
+                            <p class="para">Crafting intuitive and visually stunning user experiences
+                                that elevate digital interactions to new heights</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="remains">
+        <!-- <section class="hero"> -->
+        <!-- <video class=" " style="width: 100%; height: 100%; object-fit: cover;" autoplay muted loop>
+            <source src="./images/saas.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video> -->
+        <!-- <img class="w-100 h-100 " style="object-fit: cover;" src="./images/avatar_iqverse.png" alt="">
+            <div class="coverwrap container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <h1 class="h1" id="words">We’re a data-driven AI and Web 3.0 agency in the USA and India. Soon
+                            in
+                            Dubai!</h1>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        <section class="about p-5 highlight">
+            <div class="container">
                 <div class="row ">
-                    <div class="col-lg-12 ">
-                        <h2 class="h2 text-center">About Us</h2>
+                    <div class="col-lg-6">
+                        <p class="para fs-4 heading">What we do?</p>
                     </div>
                 </div>
             </div>
-            <div class="container content-block my-2">
-                <div class="row mt-3  mb-5 d-flex align-items-center justify-content-around ">
-                    <div class=" col-lg-6 pt-0 aboutconts mt-1">
-                        <h6 class="h6 fs-3">Looking to skyrocket your AI and Web3.0 development?</h6>
-                        <p class="para long mt-3 " style="width: 100%; font-size: 15px;">Whether you're looking to
-                            explore NFT drops,
-                            delve
-                            into
-                            the world of
-                            Metaverse, cryptocurrencies, blockchain, develop and implement ERC 721 tokens, leverage
-                            sandbox environments, harness the power of artificial intelligence, embrace augmented
-                            reality/virtual reality, optimize your digital strategy, or create exceptional
-                            mobile/web
-                            applications, IQ TechMax is your trusted partner in navigating the exciting landscape of
-                            Web3.0 technologies.</p>
-
-                        <p class="para mt-4 ms-2" style=" font-size: 15px;"><i class="fa fa-check  me-2"></i> 100+
-                            happy
-                            clients.</p>
-                        <p class="para mt-4 ms-2" style=" font-size: 15px;"><i class="fa fa-check  me-2"></i>
-                            Collaborative Mindset.</p>
-                        <p class="para mt-4 ms-2" style="font-size: 15px;"><i class="fa fa-check  me-2"></i>
-                            Innovative
-                            Thinking / Creative
-                            Solution Finding
-                        </p>
-                        <p class="para mt-3 ms-2" style="font-size: 15px;"><i class="fa fa-check  me-2"></i> 10+
-                            years
-                            of experience</p>
-                    </div>
-                    <div class="col-lg-6 d-flex align-items-center justify-content-center aboutimg mt-3">
-                        <!-- <img src="./images/saas.mp4" alt=""> -->
-                        <video class=" " style="width: 100%; height: 100%; object-fit: cover;" autoplay muted loop>
-                            <source src="./images/saas.mp4" type="video/mp4">
-                            <source src="movie.ogg" type="video/ogg">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-
-                </div>
-                <!-- <hr class="mt-5" style="color: white !important; height:2px !important;"> -->
-
-            </div>
-
-        </div>
-        <div class="expertise mb-5 d-flex flex-column align-items-center justify-content-center" id="expertise">
-            <div class="container ">
-                <div class="row justify-content-center ">
+            <div class="container">
+                <div class="row justify-content-around">
                     <div class="col-lg-8">
-                        <h2 class=" h3 mt-5 text-center mb-0">Unlock the Potential of AI and Web3: Your Gateway to a
-                            Transformed Lifestyle</h2>
-                    </div>
-                    <!-- <div class="col-lg-8 my-2">
+                        <p class="fs-2" style="line-height: 60px;"><span class="opacity">We’re</span> <span
+                                class="opacity">a</span> <span class="opacity">data-driven</span> <span
+                                class="opacity">AI</span> <span class="opacity">and</span> <span class="opacity">Web
+                                3.0</span> <span class="opacity">agency</span>
+                            <span class="opacity">in</span> <span class="opacity">the</span> <span
+                                class="opacity">the</span>
+                            <span class="opacity">and</span> <span class="opacity">India.</span>
+                            <span class="opacity">Soon</span>
+                            <span class="opacity">in</span> <span class="opacity">Dubai!</span>
+                        </p>
+                        <p class="fs-3" style="line-height: 50px;">
+                            <span class="opacity">IQ</span> <span class="opacity">TechMax</span> <span
+                                class="opacity">is</span> <span class="opacity">a</span> <span
+                                class="opacity">forward-thinking</span> <span class="opacity">company</span> <span
+                                class="opacity">at</span>
+                            <span class="opacity">the</span> <span class="opacity">forefront</span> <span
+                                class="opacity">of</span>
+                            <span class="opacity">Artificial Intelligence</span> <span class="opacity">Web3.0</span>
+                            <span class="opacity">technology,</span>
+                            <span class="opacity">empowering</span> <span class="opacity">businesses</span>
+                            <span class="opacity">to</span>
+                            <span class="opacity">&nbsp;gain</span>
+                            <span class="opacity">&nbsp;a</span>
+                            <span class="opacity">&nbsp;competitive</span>
+                            <span class="opacity">&nbsp;edge</span>
+                            <span class="opacity">&nbsp;through</span>
+                            <span class="opacity">&nbsp;innovative</span>
+                            <span class="opacity">&nbsp;software</span>
+                            <span class="opacity">&nbsp;development.</span>
+                            <span class="opacity">&nbsp;Our</span>
+                            <span class="opacity">&nbsp;team</span>
+                            <span class="opacity">&nbsp;is</span>
+                            <span class="opacity">&nbsp;dedicated</span>
+                            <span class="opacity">&nbsp;to</span>
+                            <span class="opacity">&nbsp;helping</span>
+                            <span class="opacity">&nbsp;you</span>
+                            <span class="opacity">&nbsp;harness</span>
+                            <span class="opacity">&nbsp;the</span>
+                            <span class="opacity">&nbsp;potential</span>
+                            <span class="opacity">&nbsp;of</span>
+                            <span class="opacity">&nbsp;AI</span>
+                            <span class="opacity">&nbsp;and</span>
+                            <span class="opacity">&nbsp;Web3.0</span>
+                            <span class="opacity">&nbsp;by</span>
+                            <span class="opacity">&nbsp;offering</span>
+                            <span class="opacity">&nbsp;an</span>
+                            <span class="opacity">&nbsp;array</span>
+                            <span class="opacity">&nbsp;of</span>
+                            <span class="opacity">&nbsp;services</span>
+                            <span class="opacity">&nbsp;tailored</span>
+                            <span class="opacity">&nbsp;to</span>
+                            <span class="opacity">&nbsp;your</span>
+                            <span class="opacity">&nbsp;needs.</span>
+                            <span class="opacity">&nbsp;We</span>
+                            <span class="opacity">&nbsp;specialize</span>
+                            <span class="opacity">&nbsp;in</span>
+                            <span class="opacity">&nbsp;creating</span>
+                            <span class="opacity">&nbsp;dynamic</span>
+                            <span class="opacity">&nbsp;AI</span>
+                            <span class="opacity">&nbsp;and</span>
+                            <span class="opacity">&nbsp;Web</span>
+                            <span class="opacity">&nbsp;3.0</span>
+                            <span class="opacity">&nbsp;applications</span>
+                            <span class="opacity">&nbsp;that</span>
+                            <span class="opacity">&nbsp;leverage</span>
+                            <span class="opacity">&nbsp;the</span>
+                            <span class="opacity">&nbsp;latest</span>
+                            <span class="opacity">&nbsp;tools</span>
+                            <span class="opacity">&nbsp;and</span>
+                            <span class="opacity">&nbsp;frameworks,</span>
+                            <span class="opacity">&nbsp;ensuring</span>
+                            <span class="opacity">&nbsp;your</span>
+                            <span class="opacity">&nbsp;company</span>
+                            <span class="opacity">&nbsp;stays</span>
+                            <span class="opacity">&nbsp;at</span>
+                            <span class="opacity">&nbsp;the</span>
+                            <span class="opacity">&nbsp;cutting</span>
+                            <span class="opacity">&nbsp;edge</span>
+                            <span class="opacity">&nbsp;of</span>
+                            <span class="opacity">&nbsp;technological</span>
+                            <span class="opacity">&nbsp;advancements.</span>
 
-                        <p class="para text-center mb-5">Discover the power of Artificial Intelligence and Web3 with us.
-                            Transform your digital experience, unlock new possibilities, and redefine your future.
-                            Partner with pioneers in AI and Web3 technology to elevate your lifestyle and seize the
-                            opportunities of tomorrow.</p>
-                    </div> -->
 
-                </div>
-            </div>
-            <div class="container mt-1">
-                <div class="row mt-2 mb-2  justify-content-center d-flex align-items-center justify-content-around"
-                    style="margin-left: 10%;  margin-right: 10%;">
-                    <!-- rightside -->
-                    <div class="col-md-6 col-sm-12 exp-cards mt-1 mb-3">
-                        <div class="right r-one one" style="">
-                            <div class="my-2"><img src="./images/technology.png" alt="" style="width: 70px;">
-                            </div>
 
-                            <strong class=" fs-5 my-2">Augmented Reality</strong>
-                            <p class="para  my-2" style="font-size: 17px;">Pioneering the next frontier of immersive
-                                reality
-                                through cutting-edge
-                                AR/VR
-                                development</p>
-                        </div>
-                        <div class="right r-two two" style="">
-                            <div class="my-2"><img src="./images/artificial-intelligence.png" alt=""
-                                    style="width: 70px;">
-                            </div>
 
-                            <strong class=" fs-5 my-2">Artificial Intelligence</strong>
-                            <p class="para  my-2" style="font-size: 17px;">Building applications for image recognition,
-                                object detection and visual data analysis.</p>
-                        </div>
-                        <div class="right r-three three" style="">
-                            <div class="my-2"><img src="./images/simulation-game.png" alt="" style="width: 70px;">
-                            </div>
 
-                            <strong class=" fs-5 my-2">Metaverse Development</strong>
-                            <p class="para  my-2" style="font-size: 17px;">Building interconnected virtual universes to
-                                redefine the future of digital interaction and experience
 
-                            </p>
-                        </div>
-                        <div class="right r-four four" style="">
-                            <div class="my-2"><img src="./images/game-development.png" alt="" style="width: 70px;">
-                            </div>
-
-                            <strong class=" fs-5 my-2">Game Development</strong>
-                            <p class="para  my-2" style="font-size: 17px;">Crafting immersive worlds and captivating
-                                experiences through innovative game development</p>
-                        </div>
-                    </div>
-
-                    <!-- rightside  -->
-                    <!-- leftside -->
-                    <div class="col-md-6 col-sm-12 exp-cards mt-1 mb-3">
-                        <div class="left l-one one" style="">
-                            <div class="my-2"><img src="./images/game-development.png" alt="" style="width: 70px;">
-                            </div>
-
-                            <strong class=" fs-5 my-2">Virtual Reality</strong>
-                            <p class="para  my-2" style="font-size: 17px;">Pioneering the next frontier of immersive
-                                reality
-                                through cutting-edge AR/VR development</p>
-                        </div>
-                        <div class="left l-two two" style="">
-                            <div class="my-2"><img src="./images/card.png" alt="" style="width: 70px;">
-                            </div>
-
-                            <strong class=" fs-5 my-2">Blockchain / NFT</strong>
-                            <p class="para  my-2" style="font-size: 17px;">Unlock digital ownership with our
-                                cutting-edge blockchain and NFT services</p>
-                        </div>
-                        <div class="left l-three three" style="">
-                            <div class="my-2"><img src="./images/mobile-development.png" alt="" style="width: 70px;">
-                            </div>
-
-                            <strong class=" fs-5 my-2">Application Development</strong>
-                            <p class="para  my-2" style="font-size: 17px;">Shaping the mobile experience with innovative
-                                app development solutions</p>
-                        </div>
-                        <div class="left l-four four" style="">
-                            <div class="my-2"><img src="./images/coding.png" alt="" style="width: 70px;">
-                            </div>
-
-                            <strong class=" fs-5 my-2">UI / UX & Web Development</strong>
-                            <p class="para  my-2" style="font-size: 17px;">Elevating online presence and user experience
-                                through dynamic web development solutions.
-                            </p>
-                        </div>
-                    </div>
-                    <!-- leftside  -->
-
-                </div>
-            </div>
-
-        </div>
-        <div class="faq h-100 px-2 ">
-            <div class="container mt-5">
-                <div class="row ">
-                    <div class="col-lg-12 ">
-                        <h2 class="h2 text-center">Frequenty Asked Questions</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="container my-4">
-                <div class="row my-3 mx-1">
-                    <div class="col-lg-12 my-2">
-                        <div id="accordion">
-                            <div class="card">
-                                <div class="card-header d-flex" id="headingOne">
-                                    <h5 class="mb-0 align-self-center">
-                                        <button class="btn " data-toggle="collapse" data-target="#collapseOne"
-                                            aria-expanded="true" aria-controls="collapseOne">
-                                            <i class="fa-solid fa-plus"></i> </button>
-
-                                    </h5>
-                                    <strong class="fs-3 w-100 text-center">Question 1</strong>
-
-                                </div>
-
-                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
-                                        dolor
-                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                                        tempor,
-                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                        nesciunt
-                                        you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header d-flex" id="headingTwo">
-                                    <h5 class="mb-0 align-self-center">
-                                        <button class="btn collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                                            aria-expanded="false" aria-controls="collapseTwo">
-                                            <i class="fa-solid fa-plus"></i>
-                                        </button>
-                                    </h5>
-                                    <strong class="fs-3 w-100 text-center">Question 2</strong>
-
-                                </div>
-                                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
-                                        dolor
-                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                                        tempor,
-                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                        nesciunt
-                                        you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header d-flex" id="headingThree">
-                                    <h5 class="mb-0 align-self-center">
-                                        <button class="btn  collapsed" data-toggle="collapse"
-                                            data-target="#collapseThree" aria-expanded="false"
-                                            aria-controls="collapseThree">
-                                            <i class="fa-solid fa-plus"></i> </button>
-                                    </h5>
-                                    <strong class="fs-3 w-100 text-center">Question 3</strong>
-
-                                </div>
-                                <div id="collapseThree" class="collapse" aria-labelledby="headingThree"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
-                                        dolor
-                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                                        tempor,
-                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                        nesciunt
-                                        you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <div class="card-header d-flex" id="headingFour">
-                                    <h5 class="mb-0 align-self-center">
-                                        <button class="btn  collapsed" data-toggle="collapse"
-                                            data-target="#collapseFour" aria-expanded="false"
-                                            aria-controls="collapseFour">
-                                            <i class="fa-solid fa-plus"></i> </button>
-                                    </h5>
-                                    <strong class="fs-3 w-100 text-center">Question 4</strong>
-
-                                </div>
-                                <div id="collapseFour" class="collapse" aria-labelledby="headingFour"
-                                    data-parent="#accordion">
-                                    <div class="card-body">
-                                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry
-                                        richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard
-                                        dolor
-                                        brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                                        tempor,
-                                        sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                                        shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson
-                                        cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo.
-                                        Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth
-                                        nesciunt
-                                        you probably haven't heard of them accusamus labore sustainable VHS.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-                <hr class="mt-5" style="color: white !important; height:2px !important;">
-
-            </div>
-
-        </div>
-        <div class="clients h-100 px-1 ">
-            <div class="container mt-5">
-                <div class="row ">
-                    <div class="col-lg-12 ">
-                        <h2 class="h2 text-center">Growing with us, Mutually Over a time</h2>
-
-                    </div>
-                    <div class="w-100 col-lg-10 mt-2">
-
-                        <p class="para text-center ">Collaborated,
-                            Believed and
-                            Achieved. Here are our highly trusted clients, the driving force behind our success story
+                        </p>
+                        <p class="para fs-6 heading w-100 text-center pt-4">view more <i
+                                class="fa-solid fa-arrow-right"></i>
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="partners mt-1 mb-3">
-                <div class=" logos">
-                    <img class="logo-partners" src="images/images (1).jpeg" alt="">
-                    <img class="logo-partners" src="images/images (11).png" alt="">
-                    <img class="logo-partners" src="images/images (3).png" alt="">
-                    <img class="logo-partners" src="images/images (4).png" alt="">
-                    <img class="logo-partners" src="images/images (5).png" alt="">
-                    <img class="logo-partners" src="images/images (6).png" alt="">
-                    <img class="logo-partners" src="images/images (7).png" alt="">
-                    <img class="logo-partners" src="images/images(8).jpg" alt="">
-                    <img class="logo-partners" src="images/german.jpeg" alt="">
-                    <img class="logo-partners" src="images/argick_logo.jpeg" alt="">
-                    <img class="logo-partners" src="images/goingclear.png" alt="">
-                    <img class="logo-partners" src="images/spotnik_technologies_logo.jpeg" alt="">
-                    <img class="logo-partners" src="images/pencilmonk_logo.jpeg" alt="">
-                    <img class="logo-partners" src="images/pixel-mortar.png" alt="">
-                    <img class="logo-partners" src="images/images (1).png" alt="">
+        </section>
+        <div id="feature-scroll" class="feature-scroll mb-5 pb-4 d-flex ">
+            <div class="feature-cont  d-flex justify-content-start align-items-center">
+                <p class=" fs-1">
+                    Artificial
+                </p>
+                <p class="fs-1">
+                    &nbsp;Intelligence
+                </p>
+                <p class="fs-1 mx-3">
+                    /
+                </p>
+                <p class="fs-1">
+                    Game
+                </p>
+                <p class="fs-1">
+                    &nbsp;Development
+                </p>
+                <p class="fs-1 mx-3">
+                    /
+                </p>
+                <p class="fs-1">
+                    Augmented </p>
+                <p class="fs-1">
+                    &nbsp;Reality
+                </p>
+                <p class="fs-1 mx-3">
+                    /
+                </p>
+                <p class="fs-1">
+                    Virtual</p>
+                <p class="fs-1">
+                    &nbsp;Reality
+                </p>
+                <p class="fs-1 mx-3">
+                    /
+                </p>
+                <p class="fs-1">
+                    Blockchain&</p>
+                <p class="fs-1">
+                    NFT
+                </p>
+                <p class="fs-1 mx-3">
+                    /
+                </p>
+                <p class="fs-1">
+                    Metaverse</p>
+                <p class="fs-1">
+                    &nbsp;Development
+                </p>
+                <p class="fs-1 mx-3">
+                    /
+                </p>
+                <p class="fs-1">
+                    Application
+                </p>
+                <p class="fs-1">
+                    &nbsp;Development
+                </p>
 
-
-
-
-
-                </div>
-                <div class=" logos">
-                    <img class="logo-partners" src="images/images (1).jpeg" alt="">
-                    <img class="logo-partners" src="images/images (11).png" alt="">
-                    <img class="logo-partners" src="images/images (3).png" alt="">
-                    <img class="logo-partners" src="images/images (4).png" alt="">
-                    <img class="logo-partners" src="images/images (5).png" alt="">
-                    <img class="logo-partners" src="images/images (6).png" alt="">
-                    <img class="logo-partners" src="images/images (7).png" alt="">
-                    <img class="logo-partners" src="images/images(8).jpg" alt="">
-                    <img class="logo-partners" src="images/german.jpeg" alt="">
-                    <img class="logo-partners" src="images/argick_logo.jpeg" alt="">
-                    <img class="logo-partners" src="images/goingclear.png" alt="">
-                    <img class="logo-partners" src="images/spotnik_technologies_logo.jpeg" alt="">
-                    <img class="logo-partners" src="images/pencilmonk_logo.jpeg" alt="">
-                    <img class="logo-partners" src="images/pixel-mortar.png" alt="">
-                    <img class="logo-partners" src="images/images (1).png" alt="">
-
-
-
-
-
-
-                </div>
             </div>
         </div>
+
+        <section class="features my-2">
+            <div class="container mb-2">
+                <div class="row justify-content-around">
+                    <div class="col-lg-12">
+                        <h1 class="h1 highlight text-center heading">Unlock the Potential of AI and Web3: Your Gateway
+                            to a Transformed Lifestyle
+                            </h2>
+                            <!-- <h3 class="h3 fs-5 highlight text-center">Discover the power of Artificial Intelligence and
+                                Web3 with us. Transform your digital experience, unlock new possibilities, and redefine
+                                your future. Partner with pioneers in AI and Web3 technology to elevate your lifestyle
+                                and seize the opportunities of tomorrow.
+
+                            </h3> -->
+                    </div>
+                </div>
+            </div>
+            <div class="container w-100 m-0 p-0 py-2" style="max-width:100% !important; ">
+                <div class="row w-100 p-0 m-0 row-feature">
+                    <div class="col-lg-3 col-md-12 p-0 col1 ">
+                        <div class="colone component">
+                            <img style="width: 100%; height:100%; object-fit: cover;"
+                                src="https://www.mckinsey.com/~/media/mckinsey/featured%20insights/mckinsey%20explainers/what%20is%20ai/what-is-ai-1270595233-hero-1536x864-april-2024.jpg?cq=50&mw=767&cpy=Center"
+                                alt="">
+                            <div class="coverwrap d-flex flex-column justify-content-center align-items-center ">
+                                <div style="width:80px; height:80px; " class="p-1">
+
+                                    <img style="width:100%;height:100%; " src="./images/artificial-intelligence.png"
+                                        alt="">
+                                </div>
+                                <strong class="fs-4 fw-normal p-2 " style="color: #080808;">Artificial
+                                    Intelligence</strong>
+                                <div class="colone-cont d-flex justify-content-around align-items-center">
+                                    <p class=" para p-2 fs-5  text-center">Building applications for image
+                                        recognition, object detection and visual data analysis.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-lg-3 col-md-12 p-0 d-flex flex-column col2">
+                        <div class="coltwo component">
+                            <img style="width: 100%; height:100%; object-fit: cover;"
+                                src="https://erepublic.brightspotcdn.com/dims4/default/9eb598a/2147483647/strip/true/crop/3000x1564+0+118/resize/840x438!/quality/90/?url=http%3A%2F%2Ferepublic-brightspot.s3.us-west-2.amazonaws.com%2Fe2%2F1a%2F1aec85ee42bfae65edeb733a0522%2Ffirst-aid-vr.jpg"
+                                alt="">
+                            <div class="coverwrap d-flex flex-column justify-content-center align-items-center ">
+                                <div style="width:80px; height:80px; " class="p-1">
+
+                                    <img style="width:100% ;height:100%; " src="./images/technology.png" alt="">
+                                </div>
+                                <strong class="fs-4 fw-normal p-2 " style="color: #080808;">Augmented
+                                    Reality</strong>
+                                <div class="coltwo-cont d-flex justify-content-around align-items-center">
+                                    <p class=" para p-2 fs-5  text-center">Pioneering the next frontier of
+                                        immersive reality through cutting-edge AR/VR development
+
+                                    </p>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                        <div class="colthree component">
+                            <img style="width: 100%; height:100%; object-fit: cover;" src="./images/meta_homepage.jpg"
+                                alt="">
+                            <div class="coverwrap d-flex flex-column justify-content-center align-items-center ">
+                                <div style="width:80px; height:80px; " class="p-1">
+
+                                    <img style="width:100% ;height:100%; " src="./images/simulation-game.png" alt="">
+                                </div>
+                                <strong class="fs-4 fw-normal p-2 " style="color: #080808;">Metaverse
+                                    Development</strong>
+                                <div class="colthree-cont d-flex justify-content-around align-items-center">
+                                    <p class=" para p-2 fs-5  text-center">Pioneering the next frontier of
+                                        immersive reality through cutting-edge AR/VR development
+
+                                    </p>
+                                </div>
+                                <!-- https://tsdev-ts.s3.amazonaws.com/wp-content/uploads/2019/05/23120035/images.martechadvisor.comvirtual_reality_5cd58437f-bb9f86e201a46ca779849d8a544ca557a6886040.jpg -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 p-0  d-flex flex-column col3 ">
+                        <div class="comp comp1">
+                            <img style="width: 100%; height:100%; object-fit: cover;"
+                                src="https://tsdev-ts.s3.amazonaws.com/wp-content/uploads/2019/05/23120035/images.martechadvisor.comvirtual_reality_5cd58437f-bb9f86e201a46ca779849d8a544ca557a6886040.jpg"
+                                alt="">
+                            <div class="coverwrap d-flex flex-column justify-content-center align-items-center ">
+                                <div style="width:80px; height:80px; " class="p-1">
+
+                                    <img style="width:100% ;height:100%; " src="./images/game-development.png" alt="">
+                                </div>
+                                <strong class="fs-4 fw-normal p-2 " style="color: #080808;">Virtual Reality</strong>
+                                <div class="comp1-cont d-flex justify-content-around align-items-center">
+                                    <p class=" para p-2 fs-5  text-center">Pioneering the next frontier of
+                                        immersive reality through cutting-edge AR/VR development
+
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="comp comp2">
+                            <div class="d-flex w-100 h-100 ">
+                                <div class="col-lg-6 col-md-12 h-100 component-1">
+                                    <div class="component1 ">
+                                        <img style="width: 100%; height:100%; object-fit: cover;"
+                                            src="https://www.serigor.com/wp-content/uploads/2022/08/Top-6-Front-End-Web-Development-Tools-to-Increase-Your-Productivity-in-2020-1.jpg"
+                                            alt="">
+                                        <div
+                                            class="coverwrap d-flex flex-column justify-content-center align-items-center ">
+                                            <div style="width:80px; height:80px; " class="p-1">
+
+                                                <img style="width:100% ;height:100%; " src="./images/coding.png" alt="">
+                                            </div>
+                                            <strong class="fs-4 fw-normal p-2 " style="color: #080808;">UI/UX & Web
+                                                Development</strong>
+                                            <div
+                                                class="component1-cont d-flex justify-content-around align-items-center">
+                                                <p class=" para p-2 fs-5  text-center">Pioneering the next
+                                                    frontier of
+                                                    immersive reality through cutting-edge AR/VR development
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-12 h-100 component-2">
+                                    <div class="component2 ">
+                                        <img style="width: 100%; height:100%; object-fit: cover;"
+                                            src="https://images.theconversation.com/files/121656/original/image-20160509-23367-kxbc3k.jpg?ixlib=rb-4.1.0&rect=345%2C0%2C2178%2C1059&q=45&auto=format&w=1356&h=668&fit=crop"
+                                            alt="">
+                                        <div
+                                            class="coverwrap d-flex flex-column justify-content-center align-items-center ">
+                                            <div style="width:80px; height:80px; " class="p-1">
+
+                                                <img style="width:100% ;height:100%; "
+                                                    src="./images/mobile-development.png" alt="">
+                                            </div>
+                                            <strong class="fs-4 fw-normal p-2 " style="color: #080808;">BlockChain /
+                                                NFT</strong>
+                                            <div
+                                                class="component2-cont d-flex justify-content-around align-items-center">
+                                                <p class=" para p-2 fs-5  text-center">Pioneering the next
+                                                    frontier of
+                                                    immersive reality through cutting-edge AR/VR development
+
+                                                </p>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+    </div>
+    </div>
     </section>
-    <!-- </section> -->
-    <footer class="footer">
+    <section class="projects my-4">
         <div class="container">
             <div class="row justify-content-around">
-                <div class="col-lg-5 col1 my-4 ">
-                    <a href="" class="foot1 d-flex align-items-center  ms-3" style="text-decoration: none;">
-                        <img class="ms-1 me-1" src="./images/bg removed iqtechmax.png" alt="">
-                        <h3 class="h2 fs-5 ms-3 mb-3 text-center" style="display: inline-block;">IQTechMax</h3>
-
-                    </a>
-                    <p class="para long mt-1 ms-4" style=" font-size: 15px;">Elevate your Web3.0 development
-                        with
-                        our expert team. Contact us now for unparalleled expertise and innovative solutions
-
-                    </p>
-                    <div class="social d-flex ">
-                        <a href="" class="para  long mt-1 ms-4"
-                            style="color:white ; font-size: 20px; text-decoration: none;">
-                            <i class="fa-brands fa-linkedin-in"></i> </a>
-                        <a href="" class="para  long mt-1 ms-4"
-                            style="color:white ; font-size: 20px; text-decoration: none;">
-                            <i class="fa-brands fa-instagram"></i> </a>
-                        <a href="" class="para  long mt-1 ms-4"
-                            style="color: white ; font-size: 20px; text-decoration: none;">
-                            <i class="fa-brands fa-x-twitter"></i> </a>
-                        <a href="" class="para  long mt-1 ms-4"
-                            style="color:white ; font-size: 20px; text-decoration: none;">
-                            <i class="fa-brands fa-facebook-f"></i> </a>
-                    </div>
-
-
-                </div>
-                <div class="col-lg-3 col2 my-4">
-                    <h3 class="h2 fs-5 mt-2 mb-1 location-head" style="font-weight: 500;">Our Products</h3>
-                    <a href="" class="product-para para long mt-3 mb-0"
-                        style="font-size: 15px; display: block; text-decoration: none;">
-                        <i class="fa-solid fa-caret-right me-3 "></i>
-                        IQVerse
-                    </a>
-                    <a href="" class="product-para para long  mt-2"
-                        style="font-size: 15px; display: block; text-decoration: none;">
-                        <i class="fa-solid fa-caret-right me-3"></i>
-                        IQLens
-                    </a>
-
-
-
-                </div>
-                <div class="col-lg-3 my-4 col3">
-                    <h3 class="h2 fs-5 ms-2  mt-2 mb-1 location-head" style="font-weight: 500;">Our Locations</h3>
-                    <p class="para long ms-3 mt-3 mb-0" style="font-size: 15px; display: block; text-decoration: none;">
-                        <i class="fa-solid fa-map-pin me-3 text-light"></i> IQ TechMax Inc. - USA
-                        651 N Broad St, Suite 206, New Castle , Middletown, Delaware 19709, USA
-                    </p>
-                    <p class="para long ms-3 mt-2 mb-0" style="font-size: 15px; display: block; text-decoration: none;">
-                        <i class="fa-solid fa-map-pin me-3 text-light"></i> IQ TechMax Pvt Ltd. - Chennai
-                        No:9, 3rd St, Anna Nedum Pathai, Gill Nagar, Choolaimedu, Chennai, Tamil Nadu 600094
-                    </p>
-
-                    <!-- <p class="para long ms-3 mt-1" style="font-size: 15px; display: block; text-decoration: none;"><i
-                            class="fa-solid fa-map-pin me-3"></i>USA
-                    </p> -->
-
-                </div>
-
-
-            </div>
-            <hr class="mt-1" style="color: white !important; height:2px !important;">
-            <div class="d-flex justify-content-between">
-                <div>
-                    <p class="tandc" style="display:inline-block;   color: rgba(255, 255, 255, 0.44) !important;">
-                        Privacy
-                        terms and conditions</p>
-                </div>
-                <div class="bot"> <a href="" style="display:inline-block; text-decoration: none;"
-                        class="mail text-light">sales@iqtechmax.com</a>
+                <div class="col-lg-8">
+                    <h1 class="h1 highlight text-center heading">Our Creations</h2>
+                        <h3 class="h3 fs-5 highlight text-center">Explore our Recent Works</h3>
                 </div>
             </div>
         </div>
+        <div class="container">
+            <div class="row justify-content-around">
+                <div class="col-lg-5 p-5 d-flex flex-column justify-content-around" style="height:auto">
+                    <div class="project-1 px-3 pe-0 pt-2 d-flex mb-2"
+                        style="height:auto; width:100%; background-color: white;">
+                        <strong class="col-1 fs-5 heading"> <i class="fa-solid fa-vr-cardboard"></i></strong>
+                        <div class="col-10 ms-3">
+                            <strong class=" fs-5 ">3D Immersive - Interior Design</strong>
+                            <ul class="para text-dark ms-4 p-0" style="list-style: none;">
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem, ipsum dolor.</li>
+                                <li>Lorem ipsum dolor sit.</li>
 
-    </footer>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-2 px-3 pe-0 pt-2 d-flex mb-2"
+                        style="height:auto; width:100%; background-color: white; ">
+                        <strong class="col-1 fs-5 heading"> <i class="fa-solid fa-vr-cardboard"></i></strong>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js'></script>
-    <script src='https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js'></script>
+                        <div class="col-10 ms-3">
+                            <strong class=" fs-5 ">Meta VR - BasketBall</strong>
+                            <ul class="para text-dark ms-4 p-0" style="list-style: none;">
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem, ipsum dolor.</li>
+                                <li>Lorem ipsum dolor sit.</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="project-3 px-3 pe-0 pt-2 d-flex "
+                        style="height:auto; width:100%; background-color: white;">
+                        <strong class="col-1 fs-5 heading"> <i class="fa-solid fa-vr-cardboard"></i></strong>
+                        <div class="col-10 ms-3">
+                            <strong class=" fs-5 ">Alien World</strong>
+                            <ul class="para text-dark ms-4 p-0" style="list-style: none;">
+                                <li>Lorem ipsum dolor sit amet.</li>
+                                <li>Lorem, ipsum dolor.</li>
+                                <li>Lorem ipsum dolor sit.</li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7 d-flex align-items-center justify-content-center p-5"
+                    style="height:auto; overflow: hidden;">
+                    <video class="video-project "
+                        style="width: 100%; height: auto; object-fit: cover;  border-radius: 10px !important;" autoplay
+                        muted loop>
+                        <source src="./images/saas.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video class="video-project "
+                        style="width: 100%; height: auto; object-fit: cover;  border-radius: 10px !important;" autoplay
+                        muted loop>
+                        <source src="./images/metaverse_video_3.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                    <video class="video-project active-video"
+                        style="width: 100%; height: auto; object-fit: cover;  border-radius: 10px !important;" autoplay
+                        muted loop>
+                        <source src="./images/City finalMall.mp4" type="video/mp4">
+                        <source src="movie.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="counts">
+        <div class="container p-3">
+            <div class="row w-100">
+                <div class="col-lg-12 text-center w-100">
+                    <h1 class="h1 heading">Our Journey So Far
+                    </h1>
+
+                </div>
+            </div>
+        </div>
+        <div class="container p-2">
+            <div class="row justify-content-around ">
+                <div class="col-lg-3 text-center">
+                    <h1 class="h1  " style="display: inline-block;" id="counter1">
+                    </h1>
+                    <h1 class="h1" style="display: inline-block;">+</h1>
+                    <p class="para">Employees</p>
+                </div>
+                <div class="col-lg-3 text-center">
+                    <h1 class="h1  " style="display: inline-block;" id="counter2">
+                    </h1>
+                    <!-- <h1 class="h1" style="display: inline-block;">+</h1> -->
+                    <p class="para">branches</p>
+                </div>
+                <div class="col-lg-3 text-center">
+
+                    <h1 class="h1  " style="display: inline-block;" id="counter3">
+                    </h1>
+                    <h1 class="h1" style="display: inline-block;">+</h1>
+                    <p class="para">projects</p>
+                </div>
+                <div class="col-lg-3 text-center">
+
+                    <h1 class="h1  " style="display: inline-block;" id="counter4">
+                    </h1>
+                    <h1 class="h1" style="display: inline-block;">+</h1>
+                    <p class="para ">clients</p>
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="container p-1 pb-3">
+            <div class="row w-100">
+                <div class="col-lg-12 text-center w-100">
+                    <a href="#" class="btn buttons px-3 py-2"
+                        style="width:150px; height:auto; color: black !important; border-color: #262525 !important;">Join
+                        Us</a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="full-video" style="height: 100vh; width: 100vw;">
+        <div class="video-container h-100 w-100">
+            <video width="100%" height="100%" style="object-fit: cover;" loop autoplay muted>
+                <source src="./banners/MetaVR Trailer (online-video-cutter.com).mp4" type="video/mp4">
+                <source src="movie.ogg" type="video/ogg">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </section>
+    <!-- <div class="companies py-4">
+        <article class="wrapper">
+            <div class="marquee py-1">
+                <div class="marquee__group">
+                    <img class="logo-partners" src="images/images (1).jpeg" alt="">
+                    <img class="logo-partners" src="images/images (11).png" alt="">
+                    <img class="logo-partners" src="images/images (3).png" alt="">
+                    <img class="logo-partners" src="images/images (4).png" alt="">
+                    <img class="logo-partners" src="images/images (5).png" alt="">
+                    <img class="logo-partners" src="images/images (6).png" alt="">
+                    <img class="logo-partners" src="images/images (7).png" alt="">
+                    <img class="logo-partners" src="images/images(8).jpg" alt="">
+                </div>
+
+                <div aria-hidden="true" class="marquee__group">
+                    <img class="logo-partners" src="images/images (1).jpeg" alt="">
+                    <img class="logo-partners" src="images/images (11).png" alt="">
+                    <img class="logo-partners" src="images/images (3).png" alt="">
+                    <img class="logo-partners" src="images/images (4).png" alt="">
+                    <img class="logo-partners" src="images/images (5).png" alt="">
+                    <img class="logo-partners" src="images/images (6).png" alt="">
+                    <img class="logo-partners" src="images/images (7).png" alt="">
+                    <img class="logo-partners" src="images/images(8).jpg" alt="">
+                </div>
+            </div>
+
+            <div class="marquee marquee--reverse py-1">
+                <div class="marquee__group">
+
+                    <img class="logo-partners" src="images/german.jpeg" alt="">
+                    <img class="logo-partners" src="images/argick_logo.jpeg" alt="">
+                    <img class="logo-partners" src="images/goingclear.png" alt="">
+                    <img class="logo-partners" src="images/spotnik_technologies_logo.jpeg" alt="">
+                    <img class="logo-partners" src="images/pencilmonk_logo.jpeg" alt="">
+                    <img class="logo-partners" src="images/pixel-mortar.png" alt="">
+                    <img class="logo-partners" src="images/images (1).png" alt="">
+                </div>
+
+                <div aria-hidden="true" class="marquee__group">
+                    <img class="logo-partners" src="images/german.jpeg" alt="">
+                    <img class="logo-partners" src="images/argick_logo.jpeg" alt="">
+                    <img class="logo-partners" src="images/goingclear.png" alt="">
+                    <img class="logo-partners" src="images/spotnik_technologies_logo.jpeg" alt="">
+                    <img class="logo-partners" src="images/pencilmonk_logo.jpeg" alt="">
+                    <img class="logo-partners" src="images/pixel-mortar.png" alt="">
+                    <img class="logo-partners" src="images/images (1).png" alt="">
+                </div>
+            </div>
+        </article>
+    </div> -->
+
+
+    <div class="companies py-4">
+        <div class="container mb-2">
+            <div class="row justify-content-around">
+                <div class="col-lg-12">
+                    <h1 class="h1 highlight text-center heading">Growing with us, Mutually Over a time</h2>
+
+                </div>
+            </div>
+        </div>
+        <article class="wrapper pb-4">
+            <div class="marquee py-1">
+                <div class="marquee__group">
+                    <img class="logo-partners" src="images/images (1).jpeg" alt="">
+                    <img class="logo-partners" src="images/images (11).png" alt="">
+                    <img class="logo-partners" src="images/images (3).png" alt="">
+                    <img class="logo-partners" src="images/images (4).png" alt="">
+                    <img class="logo-partners" src="images/images (5).png" alt="">
+                    <img class="logo-partners" src="images/images (6).png" alt="">
+                    <img class="logo-partners" src="images/images (7).png" alt="">
+                    <img class="logo-partners" src="images/images(8).jpg" alt="">
+                </div>
+
+                <div aria-hidden="true" class="marquee__group">
+                    <img class="logo-partners" src="images/images (1).jpeg" alt="">
+                    <img class="logo-partners" src="images/images (11).png" alt="">
+                    <img class="logo-partners" src="images/images (3).png" alt="">
+                    <img class="logo-partners" src="images/images (4).png" alt="">
+                    <img class="logo-partners" src="images/images (5).png" alt="">
+                    <img class="logo-partners" src="images/images (6).png" alt="">
+                    <img class="logo-partners" src="images/images (7).png" alt="">
+                    <img class="logo-partners" src="images/images(8).jpg" alt="">
+                </div>
+            </div>
+
+            <div class="marquee marquee--reverse py-1">
+                <div class="marquee__group">
+
+                    <img class="logo-partners" src="images/german.jpeg" alt="">
+                    <img class="logo-partners" src="images/argick_logo.jpeg" alt="">
+                    <img class="logo-partners" src="images/goingclear.png" alt="">
+                    <img class="logo-partners" src="images/spotnik_technologies_logo.jpeg" alt="">
+                    <img class="logo-partners" src="images/pencilmonk_logo.jpeg" alt="">
+                    <img class="logo-partners" src="images/pixel-mortar.png" alt="">
+                    <img class="logo-partners" src="images/images (1).png" alt="">
+                </div>
+
+                <div aria-hidden="true" class="marquee__group">
+                    <img class="logo-partners" src="images/german.jpeg" alt="">
+                    <img class="logo-partners" src="images/argick_logo.jpeg" alt="">
+                    <img class="logo-partners" src="images/goingclear.png" alt="">
+                    <img class="logo-partners" src="images/spotnik_technologies_logo.jpeg" alt="">
+                    <img class="logo-partners" src="images/pencilmonk_logo.jpeg" alt="">
+                    <img class="logo-partners" src="images/pixel-mortar.png" alt="">
+                    <img class="logo-partners" src="images/images (1).png" alt="">
+                </div>
+            </div>
+        </article>
+    </div>
+
+    <!-- <div>
+        <img class="logo-partners" src="images/images (1).jpeg" alt="">
+        <img class="logo-partners" src="images/images (11).png" alt="">
+        <img class="logo-partners" src="images/images (3).png" alt="">
+        <img class="logo-partners" src="images/images (4).png" alt="">
+        <img class="logo-partners" src="images/images (5).png" alt="">
+        <img class="logo-partners" src="images/images (6).png" alt="">
+        <img class="logo-partners" src="images/images (7).png" alt="">
+        <img class="logo-partners" src="images/images(8).jpg" alt="">
+        <img class="logo-partners" src="images/german.jpeg" alt="">
+        <img class="logo-partners" src="images/argick_logo.jpeg" alt="">
+        <img class="logo-partners" src="images/goingclear.png" alt="">
+        <img class="logo-partners" src="images/spotnik_technologies_logo.jpeg" alt="">
+        <img class="logo-partners" src="images/pencilmonk_logo.jpeg" alt="">
+        <img class="logo-partners" src="images/pixel-mortar.png" alt="">
+        <img class="logo-partners" src="images/images (1).png" alt="">
+
+
+
+
+
+
+    </div>
+    </div> -->
+    <section class="contact ">
+        <div class="container p-0 m-0 h-100 w-100" style="max-width: 100%;">
+            <div class="row p-0 m-0 h-100 w-100">
+                <div class="col-lg-6 form-content p-5 d-flex flex-column justify-content-center align-items-center">
+                    <h2 class="h2 heading p-3 pb-1">
+                        Want to drive your brand’s revenue into the stratosphere? We’re with you. Send us an email with
+                        a few lines about what you want to achieve.
+                    </h2>
+                    <p class="para text-dark p-3 pt-0 fs-5">Reach out to us via email for prompt support. Our dedicated
+                        team
+                        is
+                        here
+                        to help you navigate any inquiries or concerns you may have. Let's collaborate to turn your
+                        ideas into reality. We're eager to hear from you and ready to provide solutions tailored to your
+                        needs.</p>
+                </div>
+                <div class="col-lg-6 contact-form  p-5">
+                    <div class="appointment-form rounded p-5 " style="background-color: #262525 ;">
+                        <h1 class="display-5 mb-4 heading" style="">Connect with Us</h1>
+
+
+                        <form method="post" action="contact.php">
+                            <div class="row g-3">
+                                <div class="col-lg-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control bg-transparent border border-white"
+                                            id="name" name="name" placeholder="Your Name">
+                                        <label for="name">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-floating">
+                                        <input type="phone" class="form-control bg-transparent border border-white"
+                                            id="phone" name="phone" placeholder="Phone">
+                                        <label for="phone">Your Phone</label>
+                                    </div>
+                                </div>
+                                <div class="col-lg-12">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control bg-transparent border border-white"
+                                            id="email" name="email" placeholder="Your Email">
+                                        <label for="email">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control bg-transparent border border-white" name="message"
+                                            placeholder="Leave a message here" id="message"
+                                            style="height: 160px"></textarea>
+                                        <label for="message">Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12 wow flipInX" data-wow-delay="0.5s">
+                                    <input type="submit" value="Send Message"
+                                        class="btn btn-light text-primary w-100 py-3" name="submit">
+
+                                </div>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Start -->
+    <div class="container-fluid footer py-5 pb-1 wow fadeIn" data-wow-delay="0.2s">
+        <div class="container py-5 ">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="heading text-white mb-4">IQ TechMax</h4>
+                        <p>
+                            Elevate your <span class="fw-bold"> Artificial Intelligence Web3.0 development</span> with
+                            our expert team. Contact us now for unparalleled expertise and innovative solutions</p>
+                        <div class="d-flex align-items-center social">
+                            <i class="fas fa-share fa-2x text-white me-2"></i>
+                            <a class="btn-square btn btn-primary text-white rounded-circle mx-1 wow flipInY"
+                                data-wow-delay="0.3s" href="https://www.facebook.com/iqtechmax"><i
+                                    class="fab fa-facebook-f"></i></a>
+                            <a class="btn-square btn btn-primary text-white rounded-circle mx-1 wow flipInY"
+                                data-wow-delay="0.4s" href="https://twitter.com/TechmaxIq"><i
+                                    class="fab fa-twitter"></i></a>
+                            <a class="btn-square btn btn-primary text-white rounded-circle mx-1  wow flipInY"
+                                data-wow-delay="0.5s" href="https://www.instagram.com/iqtechmax/"><i
+                                    class="fab fa-instagram"></i></a>
+                            <a class="btn-square btn btn-primary text-white rounded-circle mx-1  wow flipInY"
+                                data-wow-delay="0.6s" href="https://www.linkedin.com/company/iq-techmax/mycompany/"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="heading mb-4 text-white">Our Locations</h4>
+                        <!--<a href="about.html"><i class="fas fa-angle-right me-2"></i> About Us</a>-->
+                        <!--<a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact Us</a>-->
+                        <!--<a href=""><i class="fas fa-angle-right me-2"></i> Privacy Policy</a>-->
+                        <!--<a href=""><i class="fas fa-angle-right me-2"></i> Terms & Conditions</a>-->
+                        <!--<a href="blog.html"><i class="fas fa-angle-right me-2"></i> Our Blog & News</a>-->
+                        <span><b><i class="fa fa-map-marker-alt me-2"></i> IQ TechMax Inc. - USA </b><br> 651 N Broad
+                            St, Suite 206, New Castle , Middletown, Delaware 19709, USA </span><br>
+                        <span><b><i class="fa fa-map-marker-alt me-2"></i> IQ TechMax Pvt Ltd. - Chennai </b><br> No:9,
+                            3rd St, Anna Nedum Pathai, Gill Nagar, Choolaimedu, Chennai, Tamil Nadu 600094</span><br>
+                        <!--<span><i class="fa fa-map-marker-alt me-2"></i> IQ TechMax Pvt Ltd. - Bangalore  <br> HBR Layout , Koramangala  </span><br>-->
+                        <!--<span><i class="fa fa-map-marker-alt me-2"></i> IQ TechMax Inc. - France<br> 29 31 Rue Daviel , Paris </span><br>-->
+                        <!--<span><i class="fa fa-map-marker-alt me-2"></i> IQ TechMax Inc. - Australia<br> 29 31 Rue Daviel , Paris </span><br>-->
+
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="heading mb-4 text-white">IQ TechMax Products</h4>
+                        <a href="#" class="mb-3" style=" text-decoration: none; "><i
+                                class="fas fa-angle-right me-2"></i>
+                            IQ Lens</a>
+                        <a href="#" style=" text-decoration: none;"><i class="fas fa-angle-right me-2"></i>
+                            IQ Verse</a>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6 col-xl-3">
+                    <div class="footer-item d-flex flex-column">
+                        <h4 class="mb-4 text-white heading">Contact Info</h4>
+
+                        <span><i class="fas fa-envelope me-2"></i> sales@iqtechmax.com</span><br>
+                        <!-- <a href=""><i class="fas fa-envelope me-2"></i> info@example.com</a> -->
+                        <span><i class="fas fa-phone me-2"></i> +91 955 145 5515</span><br>
+                        <!-- <a href="" class="mb-3"><i class="fas fa-print me-2"></i> +012 345 67890</a> -->
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="d-flex justify-content-between">
+                <p class="para pb-0 mb-0 fs-7 text-center w-100">@2024 Copyright: www.iqtechmax.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer End -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src='./js/main.js'></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
-    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+    <script src="./js/index.js"></script>
     <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script>
-        const lenis = new Lenis()
+        var navipanel = document.getElementById('navipanel');
+        var toggle = document.getElementById('toggler');
+        function opennavipanel() {
+            navipanel.classList.toggle("opennav");
+            toggle.classList.toggle("clicked");
+        }
+        function scrollFunction() {
 
-        lenis.on('scroll', (e) => {
-            // console.log(e)
-        })
+            if (document.body.scrollTop > 2 || document.documentElement.scrollTop > 100) {
+                document.getElementById('scrollIcon').classList.add('show');
+            }
+            else {
+                document.getElementById('scrollIcon').classList.remove('show');
+            }
+        }
+        function progressBarScroll() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop,
+                height = document.documentElement.scrollHeight - document.documentElement.clientHeight,
+                scrolled = (winScroll / height) * 100;
+            document.getElementById("progressBar").style.width = scrolled + "% ";
+        }
 
-        lenis.on('scroll', ScrollTrigger.update)
+        window.onscroll = function () {
+            progressBarScroll();
+            scrollFunction();
 
-        gsap.ticker.add((time) => {
-            lenis.raf(time * 1000)
-        })
+        }
+        var cursor = document.querySelector('#cursor');
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: " + (e.pageY) + "px; left: " + (e.pageX) + "px; ");
 
-        gsap.ticker.lagSmoothing(0)
 
-        const timeline = gsap.timeline({
+
+        });
+        const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: '.expertise',
-                start: ' top ',
+                trigger: '.banners',
+                start: 'top top',
                 end: '+=200%',
                 pin: true,
-                invalidateOnRefresh: true,
-
-                scrub: true
+                scrub: true,
 
             }
         })
+            .to('.section1', {
+                clipPath: 'polygon(0 0, 100% 0, 100% 1%, 0 1%)'
+            }).to('.section2', {
+                clipPath: 'polygon(0 0, 100% 0, 100% 1%, 0 1%)'
+            });
+        const boxes = gsap.utils.toArray('.opacity');
+        boxes.forEach(element => {
+            gsap.to(element, {
+                opacity: 1,
+                // ease: 'none',
+                duration: 1,
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top 80%',
+                    end: 'bottom 80%',
+                    scrub: true,
+                    // pin: true,
+                    // markers: true,
+                    // toggleClass: "opacity-1",
+                }
+            });
+        });
+        var index = 0;
+        var project = document.querySelectorAll('.video-project');
+        function show() {
+            for (var i = 0; i < project.length; i++) {
+                project[i].style.display = 'none';
+            }
+            if (index > project.length - 1) {
+                index = 0;
+            }
+            project[index].style.display = 'block';
+            index++;
+            setTimeout(show, 5000);
+        }
 
+        show();
 
-            .to('.one', { display: "none" }).
-            to('.two', { display: "block" }).
-            to('.two', { display: "none" }).
+        function counter(id, start, end, duration) {
+            var element = document.getElementById(id),
+                current = start,
+                range = end - start,
+                increment = end > start ? 1 : -1,
+                step = Math.abs(Math.floor(duration / range)),
+                timer;
 
-            to('.three', { display: "block" })
-            .to('.three', { display: "none" })
-            .
+            function startCounter() {
+                timer = setInterval(() => {
+                    current += increment;
+                    element.textContent = current;
+                    if (current == end) {
+                        clearInterval(timer);
+                    }
+                }, step);
+            }
 
-            to('.four', { display: "block" })
-            .to('.four', { display: "block" })
+            let observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        startCounter();
+                        observer.unobserve(element); // Stop observing once the counter starts
+                    }
+                });
+            });
 
-            ;
-        var controller = new ScrollMagic.Controller({ loglevel: 2 });
+            observer.observe(element);
+        }
 
-        new ScrollMagic.Scene({
-            triggerElement: "#section2",
-            triggerHook: 1,
-            duration: "100%"
-        }).setPin("#section1 .pinWrapper", {
-            pushFollowers: false
-        }).addTo(controller);
-
-        new ScrollMagic.Scene({
-            triggerElement: "#section2",
-            triggerHook: 1,
-            duration: "200%"
-        }).setPin("#section2 .pinWrapper", {
-            pushFollowers: false
-        }).addTo(controller);
-
-        new ScrollMagic.Scene({
-            triggerElement: "#section3",
-            triggerHook: 1,
-            duration: "200%"
-        }).setPin("#section3 .pinWrapper", {
-            pushFollowers: false
-        }).addTo(controller);
+        counter("counter1", 0, 50, 1500);
+        counter("counter2", 0, 3, 500);
+        counter("counter3", 0, 50, 800);
+        counter("counter4", 0, 100, 1500);
 
 
 
